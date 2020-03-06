@@ -38,7 +38,23 @@
                             <ColumnDefinition/>
                             <ColumnDefinition/>
                         </Grid.ColumnDefinitions>
-                        <Rectangle Width="64" Height="64" Fill="Black" Margin="2"/>
+                        <Grid Width="64" Height="64">
+                            <Image Margin="2" VerticalAlignment="Top"
+                                   Source="/Assets/SettingTiles/DeviceTest.png"/>
+                        </Grid>
+                        <StackPanel Grid.Column="1" MaxWidth="200" Margin="5">
+                            <TextBlock Text="Cortana Language" FontWeight="SemiBold"/>
+                            <TextBlock Text="Cortana Language, permissions, notifications" FontWeight="SemiLight" TextWrapping="WrapWholeWords"/>
+                        </StackPanel>
+                    </Grid>
+                </GridViewItem>
+                <GridViewItem>
+                    <Grid Background="{ThemeResource TileBackgroundAcrylicBrush}" Padding="10">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <Image Width="64" Height="64" Margin="2" Source="/Assets/SettingTiles/Device.png"/>
                         <StackPanel Grid.Column="1" MaxWidth="200" Margin="5">
                             <TextBlock Text="Cortana Language" FontWeight="SemiBold"/>
                             <TextBlock Text="Cortana Language, permissions, notifications" FontWeight="SemiLight" TextWrapping="WrapWholeWords"/>

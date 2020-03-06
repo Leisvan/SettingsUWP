@@ -140,6 +140,7 @@
     <Compile Include="Services\NavigationServiceEx.cs" />
     <Compile Include="Services\UIService.cs" />
     <Compile Include="ViewModels\HomeViewModel.cs" />
+    <Compile Include="ViewModels\SettingGroup.cs" />
     <Compile Include="ViewModels\ViewModelLocator.cs" />
     <Compile Include="Views\HomePage.xaml.cs">
       <DependentUpon>HomePage.xaml</DependentUpon>
@@ -166,6 +167,11 @@
     <Compile Include="Helpers\ResourceExtensions.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\SettingTiles\DeviceTest.scale-100.png" />
+    <Content Include="Assets\SettingTiles\DeviceTest.scale-125.png" />
+    <Content Include="Assets\SettingTiles\DeviceTest.scale-150.png" />
+    <Content Include="Assets\SettingTiles\DeviceTest.scale-200.png" />
+    <Content Include="Assets\SettingTiles\DeviceTest.scale-400.png" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
     <Content Include="Assets\SplashScreen.scale-200.png" />
