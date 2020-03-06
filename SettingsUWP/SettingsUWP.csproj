@@ -177,6 +177,11 @@
     <Content Include="Assets\SettingTiles\DeviceTest.scale-150.png" />
     <Content Include="Assets\SettingTiles\DeviceTest.scale-200.png" />
     <Content Include="Assets\SettingTiles\DeviceTest.scale-400.png" />
+    <Content Include="Assets\User\userprofile.scale-100.jpg" />
+    <Content Include="Assets\User\userprofile.scale-125.jpg" />
+    <Content Include="Assets\User\userprofile.scale-150.jpg" />
+    <Content Include="Assets\User\userprofile.scale-200.jpg" />
+    <Content Include="Assets\User\userprofile.scale-400.jpg" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
     <Content Include="Assets\SplashScreen.scale-200.png" />

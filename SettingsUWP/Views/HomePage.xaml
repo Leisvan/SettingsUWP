@@ -22,10 +22,14 @@
             <Grid HorizontalAlignment="Right">
                 <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Spacing="10" Margin="25,10,25,10">
                     <StackPanel VerticalAlignment="Center">
-                        <TextBlock Text="John Sazaki" HorizontalAlignment="Right" FontWeight="Bold" Style="{StaticResource SubtitleTextBlockStyle}"/>
-                        <TextBlock Text="jszmail@outlook.com" TextAlignment="Right" Foreground="{ThemeResource SystemAccentColor}"/>
+                        <TextBlock Text="Natasha Snow" HorizontalAlignment="Right" FontWeight="Bold" Style="{StaticResource SubtitleTextBlockStyle}"/>
+                        <TextBlock Text="natsnow@outlook.com" TextAlignment="Right" Foreground="{ThemeResource SystemAccentColor}"/>
                     </StackPanel>
-                    <Ellipse Width="72" Height="72" Fill="Black"/>
+                    <Ellipse Width="72" Height="72" >
+                        <Ellipse.Fill>
+                            <ImageBrush ImageSource="/Assets/User/userprofile.jpg" />
+                        </Ellipse.Fill>
+                    </Ellipse>
                 </StackPanel>
             </Grid>
         </Grid>
