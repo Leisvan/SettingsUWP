@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace SettingsUWP.Services
 {
-    public static class TestDataService
+    public static class DataProvider
     {
         public static ICollection<SettingGroup> GetTestGroups()
         {
@@ -19,6 +19,7 @@ namespace SettingsUWP.Services
                 Description = "Display, sound, notifications, power",
             };
             system.Groups.Add(new SettingSubtitle { Text = "Display", IconGlyph = "" });
+            system.Groups.Add(new SettingSubtitle { Text = "Sound", IconGlyph = "" });
 
             var devices = new SettingGroup
             {

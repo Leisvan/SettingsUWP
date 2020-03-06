@@ -18,6 +18,7 @@ namespace SettingsUWP.ViewModels
         {
             SimpleIoc.Default.Register(() => new NavigationServiceEx());
             Register<HomeViewModel, HomePage>();
+            Register<SettingGroup, SettingGroupPage>();
         }
 
         public HomeViewModel HomeViewModel => SimpleIoc.Default.GetInstance<HomeViewModel>();

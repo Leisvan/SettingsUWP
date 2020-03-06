@@ -40,8 +40,10 @@
             </Grid.RowDefinitions>
             <AutoSuggestBox PlaceholderText="Find a setting" Margin="25" HorizontalAlignment="Center" QueryIcon="Find" MinWidth="340" TabIndex="0"/>
             <toolkitcontrols:AdaptiveGridView Grid.Row="1" VerticalAlignment="Top" HorizontalAlignment="Center"
-                                              DesiredWidth="280" MaxWidth="1280"
-                                              ItemsSource="{x:Bind Home.Groups}">
+                                              DesiredWidth="280" MaxWidth="1280" Margin="40" Padding="10"
+                                              ItemsSource="{x:Bind Home.Groups}"
+                                              SelectionMode="None" IsItemClickEnabled="True"
+                                              ItemClick="SettingItemClicked">
                 <toolkitcontrols:AdaptiveGridView.ItemContainerStyle>
                     <Style TargetType="GridViewItem">
                         <Setter Property="Margin" Value="4"/>
@@ -49,7 +51,7 @@
                 </toolkitcontrols:AdaptiveGridView.ItemContainerStyle>
                 <toolkitcontrols:AdaptiveGridView.ItemTemplate>
                     <DataTemplate x:DataType="vm:SettingGroup">
-                        <Grid MinWidth="240" MinHeight="100">
+                        <Grid x:Name="LayoutRoot" MinWidth="240" MinHeight="100">
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="Auto"/>
                                 <ColumnDefinition/>

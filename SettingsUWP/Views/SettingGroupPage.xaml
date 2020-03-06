@@ -1,0 +1,45 @@
+﻿<Page
+    x:Class="SettingsUWP.Views.SettingGroupPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:SettingsUWP.Views"
+    xmlns:winui="using:Microsoft.UI.Xaml.Controls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:vm="using:SettingsUWP.ViewModels"
+    xmlns:converters="using:SettingsUWP.Views.Coverters"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Page.Resources>
+        <converters:GroupKindToImageSourceConverter x:Key="GroupKindToImageSourceConverter"/>
+    </Page.Resources>
+    <Grid Background="{ThemeResource BackgroundAcrylicBrush}">
+        <winui:NavigationView IsBackEnabled="True" IsSettingsVisible="False" BackRequested="NavView_BackRequested"
+                        MenuItemsSource="{x:Bind Group.Groups}">
+            <winui:NavigationView.MenuItemTemplate>
+                <DataTemplate x:DataType="vm:SettingSubtitle">
+                    <winui:NavigationViewItem
+                        ToolTipService.ToolTip="{x:Bind Text}">
+                        <winui:NavigationViewItem.Content>
+                            <Grid HorizontalAlignment="Stretch">
+                                <TextBlock Text="{x:Bind Text}"/>
+                            </Grid>
+                        </winui:NavigationViewItem.Content>
+                        <winui:NavigationViewItem.Icon>
+                            <FontIcon Glyph="{x:Bind IconGlyph}"/>
+                        </winui:NavigationViewItem.Icon>
+                    </winui:NavigationViewItem>
+                </DataTemplate>
+            </winui:NavigationView.MenuItemTemplate>
+            <winui:NavigationView.PaneHeader>
+                <Grid x:Name="NavigationHeader">
+                    <StackPanel Orientation="Horizontal" Spacing="10" MaxHeight="40">
+                        <Image Source="{x:Bind Group.Kind, Converter={StaticResource GroupKindToImageSourceConverter}}" Stretch="UniformToFill"/>
+                        <TextBlock Text="{x:Bind Group.Title}" Style="{StaticResource NavigationViewItemHeaderTextStyle}" VerticalAlignment="Center"/>
+                    </StackPanel>
+                </Grid>
+            </winui:NavigationView.PaneHeader>
+            <Frame x:Name="navigationFrame" />
+        </winui:NavigationView>
+    </Grid>
+</Page>

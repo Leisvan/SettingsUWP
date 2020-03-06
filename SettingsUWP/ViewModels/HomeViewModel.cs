@@ -15,7 +15,7 @@ namespace SettingsUWP.ViewModels
 
         public HomeViewModel()
         {
-            Groups = new ObservableCollection<SettingGroup>(TestDataService.GetTestGroups());
+            Groups = new ObservableCollection<SettingGroup>(DataProvider.GetTestGroups());
         }
     }
 }
