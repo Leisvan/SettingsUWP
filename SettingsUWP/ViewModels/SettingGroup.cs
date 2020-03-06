@@ -35,5 +35,7 @@ namespace SettingsUWP.ViewModels
         CortanaAndSearch,
         Privacy,
         UpdateAndSecurity,
+
+        Unknown,
     }
 }

@@ -5,8 +5,12 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:vm="using:SettingsUWP.ViewModels"
+    xmlns:converters="using:SettingsUWP.Views.Coverters"
     xmlns:toolkitcontrols="using:Microsoft.Toolkit.Uwp.UI.Controls"
     mc:Ignorable="d">
+    <Page.Resources>
+        <converters:GroupKindToImageSourceConverter x:Key="GroupKindToImageSourceConverter"/>
+    </Page.Resources>
     <Grid x:Name="ContentArea" Background="{ThemeResource DeepBackgroundAcrylicBrush}">
         <Grid.RowDefinitions>
             <RowDefinition Height="32"/>
@@ -38,17 +42,17 @@
                                               ItemsSource="{x:Bind Home.Groups}">
                 <toolkitcontrols:AdaptiveGridView.ItemTemplate>
                     <DataTemplate x:DataType="vm:SettingGroup">
-                        <Grid Background="{ThemeResource TileBackgroundAcrylicBrush}" Padding="10">
+                        <Grid Background="{ThemeResource TileBackgroundAcrylicBrush}" Padding="10" MinWidth="240">
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="Auto"/>
                                 <ColumnDefinition/>
                             </Grid.ColumnDefinitions>
                             <Grid Width="64" Height="64">
-                                <Image Margin="2" VerticalAlignment="Top" Source="/Assets/SettingTiles/DeviceTest.png"/>
+                                <Image Margin="2" VerticalAlignment="Top" Source="{x:Bind Kind, Converter={StaticResource GroupKindToImageSourceConverter}}"/>
                             </Grid>
                             <StackPanel Grid.Column="1" Margin="5">
-                                <TextBlock Text="Cortana Language" FontWeight="SemiBold"/>
-                                <TextBlock Text="Cortana Language, permissions, notifications" FontWeight="SemiLight" TextWrapping="WrapWholeWords"/>
+                                <TextBlock Text="{x:Bind Title}" FontWeight="SemiBold"/>
+                                <TextBlock Text="{x:Bind Description}" FontWeight="SemiLight" TextWrapping="WrapWholeWords"/>
                             </StackPanel>
                         </Grid>
                     </DataTemplate>
