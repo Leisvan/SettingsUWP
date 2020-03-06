@@ -5,10 +5,16 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
-    <Grid x:Name="ContentArea" Background="{ThemeResource SystemControlAcrylicWindowBrush}">
+    <Grid x:Name="ContentArea" Background="{ThemeResource DeepBackgroundAcrylicBrush}">
         <Grid.RowDefinitions>
             <RowDefinition Height="148.667"/>
             <RowDefinition/>
         </Grid.RowDefinitions>
+        <Grid Padding="25,25,10,10">
+            <TextBlock Text="Settings" Style="{StaticResource TitleTextBlockStyle}" FontWeight="Bold"/>
+        </Grid>
+        <Grid Grid.Row="1" Background="{ThemeResource BackgroundAcrylicBrush}">
+            
+        </Grid>
     </Grid>
 </Page>

@@ -9,6 +9,28 @@
             <ResourceDictionary.MergedDictionaries>
                 <XamlControlsResources xmlns="using:Microsoft.UI.Xaml.Controls" />
             </ResourceDictionary.MergedDictionaries>
+            <ResourceDictionary.ThemeDictionaries>
+                <ResourceDictionary x:Key="Light">
+                    <AcrylicBrush x:Key="DeepBackgroundAcrylicBrush" BackgroundSource="HostBackdrop"
+                                  TintColor="{StaticResource SystemChromeAltHighColor}"
+                                  TintOpacity="0.8"
+                                  FallbackColor="{StaticResource SystemChromeMediumColor}"/>
+                    <AcrylicBrush x:Key="BackgroundAcrylicBrush" BackgroundSource="HostBackdrop"
+                                  TintColor="{StaticResource SystemChromeAltHighColor}"
+                                  TintOpacity="0.9"
+                                  FallbackColor="{StaticResource SystemChromeMediumColor}"/>
+                </ResourceDictionary>
+                <ResourceDictionary x:Key="Dark">
+                    <!--Same as Light at the moment:-->
+                    <AcrylicBrush x:Key="DeepBackgroundAcrylicBrush" BackgroundSource="HostBackdrop"
+                                  TintColor="{StaticResource SystemChromeAltHighColor}"
+                                  TintOpacity="0.8"
+                                  FallbackColor="{StaticResource SystemChromeMediumColor}"/>
+                </ResourceDictionary>
+            </ResourceDictionary.ThemeDictionaries>
+            <Style x:Key="FabricFontIcon" TargetType="FontIcon">
+                <Setter Property="FontFamily" Value="ms-appx:///Assets/Fonts/FabMDL2.ttf#Fabric MDL2 Assets"/>
+            </Style>
         </ResourceDictionary>
     </Application.Resources>
 </Application>

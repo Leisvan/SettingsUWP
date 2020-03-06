@@ -177,6 +177,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include=".editorconfig" />
+    <Content Include="Assets\Fonts\FabMDL2.ttf" />
     <None Include="SettingsUWP_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
