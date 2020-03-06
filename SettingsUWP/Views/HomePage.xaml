@@ -23,9 +23,7 @@
                 <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Spacing="10" Margin="25,10,25,10">
                     <StackPanel VerticalAlignment="Center">
                         <TextBlock Text="John Sazaki" HorizontalAlignment="Right" FontWeight="Bold" Style="{StaticResource SubtitleTextBlockStyle}"/>
-                        <HyperlinkButton HorizontalAlignment="Right" Padding="0">
-                            <TextBlock Text="jszmail@outlook.com"/>
-                        </HyperlinkButton>
+                        <TextBlock Text="jszmail@outlook.com" TextAlignment="Right" Foreground="{ThemeResource SystemAccentColor}"/>
                     </StackPanel>
                     <Ellipse Width="72" Height="72" Fill="Black"/>
                 </StackPanel>
@@ -38,21 +36,26 @@
             </Grid.RowDefinitions>
             <AutoSuggestBox PlaceholderText="Find a setting" Margin="25" HorizontalAlignment="Center" QueryIcon="Find" MinWidth="340" TabIndex="0"/>
             <toolkitcontrols:AdaptiveGridView Grid.Row="1" VerticalAlignment="Top" HorizontalAlignment="Center"
-                                              DesiredWidth="280"
+                                              DesiredWidth="280" MaxWidth="1280"
                                               ItemsSource="{x:Bind Home.Groups}">
+                <toolkitcontrols:AdaptiveGridView.ItemContainerStyle>
+                    <Style TargetType="GridViewItem">
+                        <Setter Property="Margin" Value="2"/>
+                    </Style>
+                </toolkitcontrols:AdaptiveGridView.ItemContainerStyle>
                 <toolkitcontrols:AdaptiveGridView.ItemTemplate>
                     <DataTemplate x:DataType="vm:SettingGroup">
-                        <Grid Background="{ThemeResource TileBackgroundAcrylicBrush}" Padding="10" MinWidth="240">
+                        <Grid Background="{ThemeResource TileBackgroundAcrylicBrush}" Padding="10" MinWidth="240" MinHeight="100">
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="Auto"/>
                                 <ColumnDefinition/>
                             </Grid.ColumnDefinitions>
-                            <Grid Width="64" Height="64">
-                                <Image Margin="2" VerticalAlignment="Top" Source="{x:Bind Kind, Converter={StaticResource GroupKindToImageSourceConverter}}"/>
+                            <Grid Width="64" Height="64" VerticalAlignment="Top" >
+                                <Image Margin="2" Source="{x:Bind Kind, Converter={StaticResource GroupKindToImageSourceConverter}}"/>
                             </Grid>
                             <StackPanel Grid.Column="1" Margin="5">
                                 <TextBlock Text="{x:Bind Title}" FontWeight="SemiBold"/>
-                                <TextBlock Text="{x:Bind Description}" FontWeight="SemiLight" TextWrapping="WrapWholeWords"/>
+                                <TextBlock Text="{x:Bind Description}" FontWeight="Light" TextWrapping="WrapWholeWords"/>
                             </StackPanel>
                         </Grid>
                     </DataTemplate>
