@@ -28,8 +28,17 @@ namespace SettingsUWP.Services
             };
             devices.Groups.Add(new SettingSubtitle { Text = "Bluetooth & other devices", IconGlyph = "" });
 
+            var devices2 = new SettingGroup
+            {
+                Kind = SettingGroupKind.Devices,
+                Title = "Devices 2",
+                Description = "Bluetooth, printers, mouse",
+            };
+            devices2.Groups.Add(new SettingSubtitle { Text = "Bluetooth & other devices", IconGlyph = "" });
+
             groups.Add(system);
             groups.Add(devices);
+            groups.Add(devices2);
 
             return groups;
         }

@@ -5,6 +5,7 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:vm="using:SettingsUWP.ViewModels"
+    xmlns:toolkitcontrols="using:Microsoft.Toolkit.Uwp.UI.Controls"
     mc:Ignorable="d">
     <Grid x:Name="ContentArea" Background="{ThemeResource DeepBackgroundAcrylicBrush}">
         <Grid.RowDefinitions>
@@ -32,12 +33,14 @@
                 <RowDefinition/>
             </Grid.RowDefinitions>
             <AutoSuggestBox PlaceholderText="Find a setting" Margin="25" HorizontalAlignment="Center" QueryIcon="Find" MinWidth="340" TabIndex="0"/>
-            <GridView Grid.Row="1" VerticalAlignment="Top" HorizontalAlignment="Center" ItemsSource="{x:Bind Home.Groups}">
-                <GridView.ItemTemplate>
+            <toolkitcontrols:AdaptiveGridView Grid.Row="1" VerticalAlignment="Top" HorizontalAlignment="Center"
+                                              DesiredWidth="280"
+                                              ItemsSource="{x:Bind Home.Groups}">
+                <toolkitcontrols:AdaptiveGridView.ItemTemplate>
                     <DataTemplate x:DataType="vm:SettingGroup">
                         <Grid Background="{ThemeResource TileBackgroundAcrylicBrush}" Padding="10">
                             <Grid.ColumnDefinitions>
-                                <ColumnDefinition/>
+                                <ColumnDefinition Width="Auto"/>
                                 <ColumnDefinition/>
                             </Grid.ColumnDefinitions>
                             <Grid Width="64" Height="64">
@@ -49,8 +52,8 @@
                             </StackPanel>
                         </Grid>
                     </DataTemplate>
-                </GridView.ItemTemplate>
-            </GridView>
+                </toolkitcontrols:AdaptiveGridView.ItemTemplate>
+            </toolkitcontrols:AdaptiveGridView>
         </Grid>
     </Grid>
 </Page>
