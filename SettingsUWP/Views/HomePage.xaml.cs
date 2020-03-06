@@ -8,19 +8,11 @@ namespace SettingsUWP.Views
 {
     public sealed partial class HomePage : Page
     {
-        private HomeViewModel ViewModel
-        {
-            get { return ViewModelLocator.Current.HomeViewModel; }
-        }
+        private HomeViewModel Home => ViewModelLocator.Current.HomeViewModel;
 
         public HomePage()
         {
             InitializeComponent();
-        }
-
-        private void TextBlock_SelectionChanged(object sender, Windows.UI.Xaml.RoutedEventArgs e)
-        {
-
         }
     }
 }
