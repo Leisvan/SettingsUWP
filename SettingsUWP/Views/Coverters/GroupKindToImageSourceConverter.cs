@@ -25,7 +25,24 @@ namespace SettingsUWP.Views.Coverters
 
         private string GetAssetName(SettingGroupKind kind)
         {
-            return "DeviceTest";
+            switch (kind)
+            {
+                case SettingGroupKind.System: return "System";
+                case SettingGroupKind.Devices: 
+                case SettingGroupKind.Phone:
+                case SettingGroupKind.NetworkAndInternet:
+                case SettingGroupKind.Personalization:
+                case SettingGroupKind.Apps:
+                case SettingGroupKind.Account:
+                case SettingGroupKind.TimeAndLanguage:
+                case SettingGroupKind.Gaming:
+                case SettingGroupKind.EaseOfAccess:
+                case SettingGroupKind.CortanaAndSearch:
+                case SettingGroupKind.Privacy:
+                case SettingGroupKind.UpdateAndSecurity:
+                case SettingGroupKind.Unknown:
+                default: return "Devices";
+            }
         }
 
         public object ConvertBack(object value, Type targetType, object parameter, string language)

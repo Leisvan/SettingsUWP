@@ -172,11 +172,16 @@
     <Compile Include="Helpers\ResourceExtensions.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Assets\SettingTiles\DeviceTest.scale-100.png" />
-    <Content Include="Assets\SettingTiles\DeviceTest.scale-125.png" />
-    <Content Include="Assets\SettingTiles\DeviceTest.scale-150.png" />
-    <Content Include="Assets\SettingTiles\DeviceTest.scale-200.png" />
-    <Content Include="Assets\SettingTiles\DeviceTest.scale-400.png" />
+    <Content Include="Assets\SettingTiles\Devices.scale-100.png" />
+    <Content Include="Assets\SettingTiles\Devices.scale-125.png" />
+    <Content Include="Assets\SettingTiles\Devices.scale-150.png" />
+    <Content Include="Assets\SettingTiles\Devices.scale-200.png" />
+    <Content Include="Assets\SettingTiles\Devices.scale-400.png" />
+    <Content Include="Assets\SettingTiles\System.scale-100.png" />
+    <Content Include="Assets\SettingTiles\System.scale-125.png" />
+    <Content Include="Assets\SettingTiles\System.scale-150.png" />
+    <Content Include="Assets\SettingTiles\System.scale-200.png" />
+    <Content Include="Assets\SettingTiles\System.scale-400.png" />
     <Content Include="Assets\User\userprofile.scale-100.jpg" />
     <Content Include="Assets\User\userprofile.scale-125.jpg" />
     <Content Include="Assets\User\userprofile.scale-150.jpg" />
