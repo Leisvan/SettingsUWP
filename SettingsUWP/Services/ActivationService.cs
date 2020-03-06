@@ -93,6 +93,8 @@ namespace SettingsUWP.Services
 
         private async Task InitializeAsync()
         {
+            UIService.ExtendTitleBar();
+            UIService.TransparentTitleBarButtonsBackground();
             await Task.CompletedTask;
         }
 
