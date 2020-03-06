@@ -27,21 +27,20 @@ namespace SettingsUWP.Views.Coverters
         {
             switch (kind)
             {
+                default:
                 case SettingGroupKind.System: return "System";
-                case SettingGroupKind.Devices: 
-                case SettingGroupKind.Phone:
-                case SettingGroupKind.NetworkAndInternet:
-                case SettingGroupKind.Personalization:
-                case SettingGroupKind.Apps:
-                case SettingGroupKind.Account:
-                case SettingGroupKind.TimeAndLanguage:
-                case SettingGroupKind.Gaming:
-                case SettingGroupKind.EaseOfAccess:
-                case SettingGroupKind.CortanaAndSearch:
-                case SettingGroupKind.Privacy:
-                case SettingGroupKind.UpdateAndSecurity:
-                case SettingGroupKind.Unknown:
-                default: return "Devices";
+                case SettingGroupKind.Devices: return "Devices";
+                case SettingGroupKind.Phone: return "Phone";
+                case SettingGroupKind.NetworkAndInternet: return "Network";
+                case SettingGroupKind.Personalization: return "Personalization";
+                case SettingGroupKind.Apps: return "Apps";
+                case SettingGroupKind.Account: return "Account";
+                case SettingGroupKind.TimeAndLanguage: return "RegionTime";
+                case SettingGroupKind.Gaming: return "Gaming";
+                case SettingGroupKind.EaseOfAccess: return "EaseAccess";
+                case SettingGroupKind.CortanaAndSearch: return "CortanaSearch";
+                case SettingGroupKind.Privacy: return "Privacy";
+                case SettingGroupKind.UpdateAndSecurity: return "SecurityUpdate";
             }
         }
 

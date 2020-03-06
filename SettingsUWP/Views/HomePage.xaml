@@ -44,20 +44,21 @@
                                               ItemsSource="{x:Bind Home.Groups}">
                 <toolkitcontrols:AdaptiveGridView.ItemContainerStyle>
                     <Style TargetType="GridViewItem">
-                        <Setter Property="Margin" Value="2"/>
+                        <Setter Property="Margin" Value="4"/>
                     </Style>
                 </toolkitcontrols:AdaptiveGridView.ItemContainerStyle>
                 <toolkitcontrols:AdaptiveGridView.ItemTemplate>
                     <DataTemplate x:DataType="vm:SettingGroup">
-                        <Grid Background="{ThemeResource TileBackgroundAcrylicBrush}" Padding="10" MinWidth="240" MinHeight="100">
+                        <Grid MinWidth="240" MinHeight="100">
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="Auto"/>
                                 <ColumnDefinition/>
                             </Grid.ColumnDefinitions>
-                            <Grid Width="64" Height="64" VerticalAlignment="Top" >
-                                <Image Margin="2" Source="{x:Bind Kind, Converter={StaticResource GroupKindToImageSourceConverter}}"/>
+                            <Rectangle Grid.ColumnSpan="2" Fill="{ThemeResource TileBackgroundAcrylicBrush}" RadiusX="4" RadiusY="4"/>
+                            <Grid Width="64" Height="64" VerticalAlignment="Top" Margin="10">
+                                <Image Source="{x:Bind Kind, Converter={StaticResource GroupKindToImageSourceConverter}}"/>
                             </Grid>
-                            <StackPanel Grid.Column="1" Margin="5">
+                            <StackPanel Grid.Column="1" Margin="15">
                                 <TextBlock Text="{x:Bind Title}" FontWeight="SemiBold"/>
                                 <TextBlock Text="{x:Bind Description}" FontWeight="Light" TextWrapping="WrapWholeWords"/>
                             </StackPanel>
