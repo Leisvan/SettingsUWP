@@ -13,11 +13,15 @@
                 <ResourceDictionary x:Key="Light">
                     <AcrylicBrush x:Key="DeepBackgroundAcrylicBrush" BackgroundSource="HostBackdrop"
                                   TintColor="{StaticResource SystemChromeAltHighColor}"
-                                  TintOpacity="0.8"
+                                  TintOpacity="0.7"
                                   FallbackColor="{StaticResource SystemChromeMediumColor}"/>
                     <AcrylicBrush x:Key="BackgroundAcrylicBrush" BackgroundSource="HostBackdrop"
                                   TintColor="{StaticResource SystemChromeAltHighColor}"
-                                  TintOpacity="0.9"
+                                  TintOpacity="0.8"
+                                  FallbackColor="{StaticResource SystemChromeMediumColor}"/>
+                    <AcrylicBrush x:Key="TileBackgroundAcrylicBrush" BackgroundSource="HostBackdrop"
+                                  TintColor="{StaticResource SystemChromeAltHighColor}"
+                                  TintOpacity=".85"
                                   FallbackColor="{StaticResource SystemChromeMediumColor}"/>
                 </ResourceDictionary>
                 <ResourceDictionary x:Key="Dark">

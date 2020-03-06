@@ -7,14 +7,45 @@
     mc:Ignorable="d">
     <Grid x:Name="ContentArea" Background="{ThemeResource DeepBackgroundAcrylicBrush}">
         <Grid.RowDefinitions>
-            <RowDefinition Height="148.667"/>
+            <RowDefinition Height="32"/>
+            <RowDefinition Height="Auto"/>
             <RowDefinition/>
         </Grid.RowDefinitions>
-        <Grid Padding="25,25,10,10">
-            <TextBlock Text="Settings" Style="{StaticResource TitleTextBlockStyle}" FontWeight="Bold"/>
+        <TextBlock Text="Settings" Margin="15,0,0,0" VerticalAlignment="Center"/>
+        <Grid Grid.Row="1">
+            <Grid HorizontalAlignment="Right">
+                <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Spacing="10" Margin="25,10,25,10">
+                    <StackPanel VerticalAlignment="Center">
+                        <TextBlock Text="John Sazaki" HorizontalAlignment="Right" FontWeight="Bold" Style="{StaticResource SubtitleTextBlockStyle}"/>
+                        <HyperlinkButton HorizontalAlignment="Right" Padding="0">
+                            <TextBlock Text="jszmail@outlook.com"/>
+                        </HyperlinkButton>
+                    </StackPanel>
+                    <Ellipse Width="72" Height="72" Fill="Black"/>
+                </StackPanel>
+            </Grid>
         </Grid>
-        <Grid Grid.Row="1" Background="{ThemeResource BackgroundAcrylicBrush}">
-            
+        <Grid Grid.Row="2" Background="{ThemeResource BackgroundAcrylicBrush}">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <AutoSuggestBox PlaceholderText="Find a setting" Margin="25" HorizontalAlignment="Center" QueryIcon="Find" MinWidth="340" TabIndex="0"/>
+            <GridView Grid.Row="1" VerticalAlignment="Top" HorizontalAlignment="Center">
+                <GridViewItem>
+                    <Grid Background="{ThemeResource TileBackgroundAcrylicBrush}" Padding="10">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <Rectangle Width="64" Height="64" Fill="Black" Margin="2"/>
+                        <StackPanel Grid.Column="1" MaxWidth="200" Margin="5">
+                            <TextBlock Text="Cortana Language" FontWeight="SemiBold"/>
+                            <TextBlock Text="Cortana Language, permissions, notifications" FontWeight="SemiLight" TextWrapping="WrapWholeWords"/>
+                        </StackPanel>
+                    </Grid>
+                </GridViewItem>
+            </GridView>
         </Grid>
     </Grid>
 </Page>
