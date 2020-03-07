@@ -14,7 +14,7 @@
         <converters:GroupKindToImageSourceConverter x:Key="GroupKindToImageSourceConverter"/>
     </Page.Resources>
     <Grid Background="{ThemeResource BackgroundAcrylicBrush}">
-        <winui:NavigationView IsBackEnabled="True" IsSettingsVisible="False" BackRequested="NavView_BackRequested"
+        <winui:NavigationView x:Name="navView" IsBackEnabled="True" IsSettingsVisible="False" BackRequested="NavView_BackRequested"
                         MenuItemsSource="{x:Bind Group.Groups}">
             <winui:NavigationView.MenuItemTemplate>
                 <DataTemplate x:DataType="vm:SettingSubtitle">
@@ -33,7 +33,7 @@
             </winui:NavigationView.MenuItemTemplate>
             <winui:NavigationView.PaneHeader>
                 <Grid x:Name="NavigationHeader">
-                    <StackPanel Orientation="Horizontal" Spacing="10" MaxHeight="40">
+                    <StackPanel Orientation="Horizontal" Spacing="10" MaxHeight="40" Margin="0,0,0,15">
                         <Image Source="{x:Bind Group.Kind, Converter={StaticResource GroupKindToImageSourceConverter}}" Stretch="UniformToFill"/>
                         <TextBlock Text="{x:Bind Group.Title}" Style="{StaticResource NavigationViewItemHeaderTextStyle}" VerticalAlignment="Center"/>
                     </StackPanel>

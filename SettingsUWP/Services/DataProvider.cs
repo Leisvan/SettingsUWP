@@ -18,8 +18,21 @@ namespace SettingsUWP.Services
                 Title = "System",
                 Description = "Display, sound, notifications, power",
             };
+            system.Groups.Add(new SettingSubtitle { Text = "Common System Settings", IconGlyph = "" });
             system.Groups.Add(new SettingSubtitle { Text = "Display", IconGlyph = "" });
             system.Groups.Add(new SettingSubtitle { Text = "Sound", IconGlyph = "" });
+            system.Groups.Add(new SettingSubtitle { Text = "Notifications & actions", IconGlyph = "" });
+            system.Groups.Add(new SettingSubtitle { Text = "Focus asist", IconGlyph = "" });
+            system.Groups.Add(new SettingSubtitle { Text = "Power & sleep", IconGlyph = "" });
+            system.Groups.Add(new SettingSubtitle { Text = "Battery", IconGlyph = "" });
+            system.Groups.Add(new SettingSubtitle { Text = "Storage", IconGlyph = "" });
+            system.Groups.Add(new SettingSubtitle { Text = "Tablet mode", IconGlyph = "" });
+            system.Groups.Add(new SettingSubtitle { Text = "Multitasking", IconGlyph = "" });
+            system.Groups.Add(new SettingSubtitle { Text = "Projecting to this PC", IconGlyph = "" });
+            system.Groups.Add(new SettingSubtitle { Text = "Shared experiences", IconGlyph = "" });
+            system.Groups.Add(new SettingSubtitle { Text = "Clipboard", IconGlyph = "" });
+            system.Groups.Add(new SettingSubtitle { Text = "Remote Desktop", IconGlyph = "" });
+            system.Groups.Add(new SettingSubtitle { Text = "About", IconGlyph = "" });
 
             var devices = new SettingGroup
             {

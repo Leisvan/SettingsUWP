@@ -21,7 +21,7 @@
                                   FallbackColor="{StaticResource SystemChromeMediumColor}"/>
                     <AcrylicBrush x:Key="TileBackgroundAcrylicBrush" BackgroundSource="HostBackdrop"
                                   TintColor="{StaticResource SystemChromeAltHighColor}"
-                                  TintOpacity=".95"
+                                  TintOpacity=".98"
                                   FallbackColor="{StaticResource SystemChromeMediumColor}"/>
                 </ResourceDictionary>
                 <ResourceDictionary x:Key="Dark">
@@ -35,6 +35,11 @@
             <Style x:Key="FabricFontIcon" TargetType="FontIcon">
                 <Setter Property="FontFamily" Value="ms-appx:///Assets/Fonts/FabMDL2.ttf#Fabric MDL2 Assets"/>
             </Style>
+            <AcrylicBrush x:Key="NavigationViewExpandedPaneBackground"
+                          BackgroundSource="HostBackdrop"
+                          TintColor="{StaticResource SystemChromeAltHighColor}"
+                          TintOpacity="0.8"
+                          FallbackColor="{StaticResource SystemChromeMediumColor}"/>
         </ResourceDictionary>
     </Application.Resources>
 </Application>
