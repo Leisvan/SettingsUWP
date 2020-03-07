@@ -20,7 +20,7 @@
                 <RowDefinition/>
             </Grid.RowDefinitions>
             <TextBlock Text="COMMON SYSTEM SETTINGS" Margin="25,25,0,0" Style="{StaticResource CaptionTextBlockStyle}" FontWeight="SemiBold" />
-            <toolkitcontrols:StaggeredPanel Padding="25,10,25,25" ColumnSpacing="50" RowSpacing="50" Grid.Row="1">
+            <toolkitcontrols:StaggeredPanel Padding="25" ColumnSpacing="50" RowSpacing="50" Grid.Row="1">
                 <Grid MinHeight="{StaticResource MinTileHeight}">
                     <Grid.RowDefinitions>
                         <RowDefinition/>
