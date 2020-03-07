@@ -191,6 +191,7 @@
     <Content Include="Assets\LargeTile.scale-150.png" />
     <Content Include="Assets\LargeTile.scale-200.png" />
     <Content Include="Assets\LargeTile.scale-400.png" />
+    <Content Include="Assets\Screenshots\Screen_001.jpg" />
     <Content Include="Assets\SettingTiles\Account.scale-100.png" />
     <Content Include="Assets\SettingTiles\Account.scale-125.png" />
     <Content Include="Assets\SettingTiles\Account.scale-150.png" />
