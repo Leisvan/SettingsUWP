@@ -12,100 +12,101 @@
 
     </Page.Resources>
 
-    <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition/>
-        </Grid.RowDefinitions>
-        <TextBlock Text="COMMON SYSTEM SETTINGS" Margin="25,25,0,0" Style="{StaticResource CaptionTextBlockStyle}" FontWeight="SemiBold" />
-        <toolkitcontrols:StaggeredPanel Padding="25,10,25,25" ColumnSpacing="50" RowSpacing="50" Grid.Row="1">
-            <Grid MinHeight="{StaticResource MinTileHeight}">
-                <Grid.RowDefinitions>
-                    <RowDefinition/>
-                    <RowDefinition Height="Auto"/>
-                </Grid.RowDefinitions>
-                <Rectangle Grid.RowSpan="2" RadiusX="5" RadiusY="5" Fill="{ThemeResource TileBackgroundAcrylicBrush}"/>
-                <StackPanel Orientation="Vertical" Spacing="5" Margin="15">
-                    <StackPanel Orientation="Horizontal" Spacing="5" Margin="0,0,0,5">
-                        <FontIcon Glyph=""/>
-                        <TextBlock Text="Resolution &amp; Layout" Style="{StaticResource SubtitleTextBlockStyle}" FontWeight="SemiLight"/>
+    <ScrollViewer HorizontalScrollMode="Disabled" VerticalScrollBarVisibility="Auto">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <TextBlock Text="COMMON SYSTEM SETTINGS" Margin="25,25,0,0" Style="{StaticResource CaptionTextBlockStyle}" FontWeight="SemiBold" />
+            <toolkitcontrols:StaggeredPanel Padding="25,10,25,25" ColumnSpacing="50" RowSpacing="50" Grid.Row="1">
+                <Grid MinHeight="{StaticResource MinTileHeight}">
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <Rectangle Grid.RowSpan="2" RadiusX="5" RadiusY="5" Fill="{ThemeResource TileBackgroundAcrylicBrush}"/>
+                    <StackPanel Orientation="Vertical" Spacing="5" Margin="15">
+                        <StackPanel Orientation="Horizontal" Spacing="5" Margin="0,0,0,5">
+                            <FontIcon Glyph=""/>
+                            <TextBlock Text="Resolution &amp; Layout" Style="{StaticResource SubtitleTextBlockStyle}" FontWeight="SemiLight"/>
+                        </StackPanel>
+                        <TextBlock Text="Display Resolution" FontWeight="Light" Margin="0,5,0,0"/>
+                        <ComboBox HorizontalAlignment="Stretch">
+                            <ComboBoxItem Content="2560x1440 (Recommended)" IsSelected="True"/>
+                        </ComboBox>
+                        <TextBlock Text="Size of text, apps and other items" FontWeight="Light" Margin="0,5,0,0"/>
+                        <ComboBox HorizontalAlignment="Stretch">
+                            <ComboBoxItem Content="150%" IsSelected="True"/>
+                        </ComboBox>
                     </StackPanel>
-                    <TextBlock Text="Display Resolution" FontWeight="Light" Margin="0,5,0,0"/>
-                    <ComboBox HorizontalAlignment="Stretch">
-                        <ComboBoxItem Content="2560x1440 (Recommended)" IsSelected="True"/>
-                    </ComboBox>
-                    <TextBlock Text="Size of text, apps and other items" FontWeight="Light" Margin="0,5,0,0"/>
-                    <ComboBox HorizontalAlignment="Stretch">
-                        <ComboBoxItem Content="150%" IsSelected="True"/>
-                    </ComboBox>
-                </StackPanel>
-                <HyperlinkButton Grid.Row="1" HorizontalAlignment="Center" Margin="15">
-                    <TextBlock Text="Display Settings"/>
-                </HyperlinkButton>
-            </Grid>
-            <Grid MinHeight="{StaticResource MinTileHeight}">
-                <Grid.RowDefinitions>
-                    <RowDefinition/>
-                    <RowDefinition Height="Auto"/>
-                </Grid.RowDefinitions>
-                <Rectangle Grid.RowSpan="2" RadiusX="5" RadiusY="5" Fill="{ThemeResource TileBackgroundAcrylicBrush}"/>
-                <StackPanel Orientation="Vertical" Spacing="5" Margin="15">
-                    <StackPanel Orientation="Horizontal" Spacing="5" Margin="0,0,0,5">
-                        <FontIcon Glyph=""/>
-                        <TextBlock Text="Sound" Style="{StaticResource SubtitleTextBlockStyle}" FontWeight="SemiLight"/>
+                    <HyperlinkButton Grid.Row="1" HorizontalAlignment="Center" Margin="15">
+                        <TextBlock Text="Display Settings"/>
+                    </HyperlinkButton>
+                </Grid>
+                <Grid MinHeight="{StaticResource MinTileHeight}">
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <Rectangle Grid.RowSpan="2" RadiusX="5" RadiusY="5" Fill="{ThemeResource TileBackgroundAcrylicBrush}"/>
+                    <StackPanel Orientation="Vertical" Spacing="5" Margin="15">
+                        <StackPanel Orientation="Horizontal" Spacing="5" Margin="0,0,0,5">
+                            <FontIcon Glyph=""/>
+                            <TextBlock Text="Sound" Style="{StaticResource SubtitleTextBlockStyle}" FontWeight="SemiLight"/>
+                        </StackPanel>
+                        <TextBlock Text="Choose your output device" FontWeight="Light" Margin="0,5,0,0"/>
+                        <ComboBox HorizontalAlignment="Stretch">
+                            <ComboBoxItem Content="Speakers (HD Audio Device)" IsSelected="True"/>
+                        </ComboBox>
+                        <TextBlock Text="Choose your input device" FontWeight="Light" Margin="0,5,0,0"/>
+                        <ComboBox HorizontalAlignment="Stretch">
+                            <ComboBoxItem Content="Headset Microphone" IsSelected="True"/>
+                        </ComboBox>
+                        <StackPanel>
+                            <Button MinWidth="80" Margin="0,0,0,5" Style="{StaticResource ButtonRevealStyle}" Background="{x:Null}">
+                                <StackPanel Orientation="Horizontal" Spacing="5">
+                                    <FontIcon Glyph=""/>
+                                    <TextBlock Text="Test"/>
+                                </StackPanel>
+                            </Button>
+                        </StackPanel>
                     </StackPanel>
-                    <TextBlock Text="Choose your output device" FontWeight="Light" Margin="0,5,0,0"/>
-                    <ComboBox HorizontalAlignment="Stretch">
-                        <ComboBoxItem Content="Speakers (HD Audio Device)" IsSelected="True"/>
-                    </ComboBox>
-                    <TextBlock Text="Choose your input device" FontWeight="Light" Margin="0,5,0,0"/>
-                    <ComboBox HorizontalAlignment="Stretch">
-                        <ComboBoxItem Content="Headset Microphone" IsSelected="True"/>
-                    </ComboBox>
-                    <StackPanel>
-                        <Button MinWidth="80" Margin="0,0,0,5" Style="{StaticResource ButtonRevealStyle}" Background="{x:Null}">
-                            <StackPanel Orientation="Horizontal" Spacing="5">
-                                <FontIcon Glyph=""/>
-                                <TextBlock Text="Test"/>
-                            </StackPanel>
-                        </Button>
+                    <HyperlinkButton Grid.Row="1" HorizontalAlignment="Center" Margin="15">
+                        <TextBlock Text="Sound Settings"/>
+                    </HyperlinkButton>
+                </Grid>
+                <Grid MinHeight="{StaticResource MinTileHeight}">
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <Rectangle Grid.RowSpan="2" RadiusX="5" RadiusY="5" Fill="{ThemeResource TileBackgroundAcrylicBrush}"/>
+                    <StackPanel Orientation="Vertical" Spacing="5" Margin="15">
+                        <StackPanel Orientation="Horizontal" Spacing="5" Margin="0,0,0,5">
+                            <FontIcon Glyph=""/>
+                            <TextBlock Text="Night Light" Style="{StaticResource SubtitleTextBlockStyle}" FontWeight="SemiLight"/>
+                        </StackPanel>
+                        <TextBlock Text="Sunset to sunrise" FontWeight="Light" Margin="0,5,0,0"/>
+                        <ToggleSwitch IsOn="True"/>
                     </StackPanel>
-                </StackPanel>
-                <HyperlinkButton Grid.Row="1" HorizontalAlignment="Center" Margin="15">
-                    <TextBlock Text="Sound Settings"/>
-                </HyperlinkButton>
-            </Grid>
-            <Grid MinHeight="{StaticResource MinTileHeight}">
-                <Grid.RowDefinitions>
-                    <RowDefinition/>
-                    <RowDefinition Height="Auto"/>
-                </Grid.RowDefinitions>
-                <Rectangle Grid.RowSpan="2" RadiusX="5" RadiusY="5" Fill="{ThemeResource TileBackgroundAcrylicBrush}"/>
-                <StackPanel Orientation="Vertical" Spacing="5" Margin="15">
-                    <StackPanel Orientation="Horizontal" Spacing="5" Margin="0,0,0,5">
-                        <FontIcon Glyph=""/>
-                        <TextBlock Text="Night Light" Style="{StaticResource SubtitleTextBlockStyle}" FontWeight="SemiLight"/>
-                    </StackPanel>
-                    <TextBlock Text="Sunset to sunrise" FontWeight="Light" Margin="0,5,0,0"/>
-                    <ToggleSwitch IsOn="True"/>
-                </StackPanel>
-                <HyperlinkButton Grid.Row="1" HorizontalAlignment="Center" Margin="15">
-                    <TextBlock Text="Night light Settings"/>
-                </HyperlinkButton>
-            </Grid>
-        </toolkitcontrols:StaggeredPanel>
-        <StackPanel Grid.Row="2" Padding="25" Spacing="25" Margin="0,25,0,0">
-            <Grid>
-                <Grid.RowDefinitions>
-                    <RowDefinition/>
-                </Grid.RowDefinitions>
-                <Rectangle Grid.RowSpan="2" RadiusX="5" RadiusY="5"/>
-                <StackPanel Orientation="Vertical" Spacing="5" Margin="15">
-                    <StackPanel Orientation="Horizontal" Spacing="5" Margin="0,0,0,5">
-                        <TextBlock Text="Device Specifications" Style="{StaticResource SubtitleTextBlockStyle}" FontWeight="SemiLight"/>
-                    </StackPanel>
-                    <TextBlock  Margin="0,5,0,0">
+                    <HyperlinkButton Grid.Row="1" HorizontalAlignment="Center" Margin="15">
+                        <TextBlock Text="Night light Settings"/>
+                    </HyperlinkButton>
+                </Grid>
+            </toolkitcontrols:StaggeredPanel>
+            <StackPanel Grid.Row="2" Padding="25" Spacing="25" Margin="0,75,0,0" Opacity=".8">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <Rectangle Grid.RowSpan="2" RadiusX="5" RadiusY="5"/>
+                    <StackPanel Orientation="Vertical" Spacing="5" Margin="15">
+                        <StackPanel Orientation="Horizontal" Spacing="5" Margin="0,0,0,5">
+                            <TextBlock Text="Device Specifications" Style="{StaticResource SubtitleTextBlockStyle}" FontWeight="SemiLight"/>
+                        </StackPanel>
+                        <TextBlock  Margin="0,5,0,0">
                         <Run Text="Device name:&#x9;" />
                         <Run Text="Station B64" FontWeight="Light"/>
                         <LineBreak/>
@@ -120,11 +121,11 @@
                         <LineBreak/>
                         <Run Text="Pen and touch:&#x9;"/>
                         <Run Text="No pen or touch input is available for this display" FontWeight="Light"/>
-                    </TextBlock>
-                    <StackPanel Orientation="Horizontal" Spacing="5" Margin="0,25,0,5">
-                        <TextBlock Text="System Specifications" Style="{StaticResource SubtitleTextBlockStyle}" FontWeight="SemiLight" />
-                    </StackPanel>
-                    <TextBlock  Margin="0,5,0,0">
+                        </TextBlock>
+                        <StackPanel Orientation="Horizontal" Spacing="5" Margin="0,25,0,5">
+                            <TextBlock Text="System Specifications" Style="{StaticResource SubtitleTextBlockStyle}" FontWeight="SemiLight" />
+                        </StackPanel>
+                        <TextBlock  Margin="0,5,0,0">
                         <Run Text="Edition:&#x9;&#x9;" />
                         <Run Text="Windows 10 Pro" FontWeight="Light"/>
                         <LineBreak/>
@@ -137,9 +138,10 @@
                         <Run Text="OS Build:&#x9;"/>
                         <Run Text="18363.657" FontWeight="Light"/>
                         <LineBreak/>
-                    </TextBlock>
-                </StackPanel>
-            </Grid>
-        </StackPanel>
-    </Grid>
+                        </TextBlock>
+                    </StackPanel>
+                </Grid>
+            </StackPanel>
+        </Grid>
+    </ScrollViewer>
 </Page>
